@@ -18,7 +18,7 @@ h2{
     font-size: 30px;
 }
 
-nav a, figcaption, .menu li, #social li, footer{
+nav a, figcaption, #social li, footer{
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
 }
@@ -28,6 +28,14 @@ p, li, nav, input{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
+header{
+    height: 300px;
+}
+
+h1{
+    position: relative;
+    top: 150px;
+}
 
 
 menu {
@@ -36,6 +44,12 @@ menu {
     display: flex;
     padding: 0;
     text-align: center;
+    position: absolute;
+    top: 170px;
+}
+
+menu li{
+    flex: 1;
 }
 
 menu a{
@@ -44,9 +58,8 @@ menu a{
     color: #EB5428;
 }
 
-menu ul li{
-    flex: 1;
-    padding: 0;
+menu svg{
+    padding: 10px;
 }
 
 article img{
@@ -128,77 +141,140 @@ figure div{
     grid-column-start: 2;
 }
 
-nav{
-    width: 414px;
-    background-color: #ffffff;
-    position: fixed;
-    top:0;
-    z-index: 1; 
+.fourstar svg:not(:last-child){
+    fill: #EB5428;
 }
 
+.fivestar svg{
+    fill: #EB5428;
+}
+
+nav{
+    width: 414px;
+    background-color: #Ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+}
+nav h2, nav img{
+    visibility: hidden;
+    height: 1px;
+}
 nav ul{
     text-align: center;
     margin: 0;
+    padding: 0;
     list-style: none;
     overflow: hidden;
     max-height: 0;
-    background-color: #ffffff;
     transition: max-height .5s ease-out;
 }
 
-nav a{
-    display: block;
+nav li a {
+    padding: 20px 20px;
     text-decoration: none;
     color: #EB5428;
 }
-
-a img{
-    visibility: hidden;
-    height: 1px;
-}
-
-nav h2{
-    visibility: hidden;
-    height: 1px;
-}
-
 [href="#home"]{
     background-color: #EB5428;
     position: absolute;
     top: 0;
-    left: 60px;
-    padding: 0px 120px;
+    left: 100px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    padding-left: 80px;
+    padding-right: 70px;
+    
+}
+nav li:hover{
+    background-color: #EB5428;
 }
 
+nav a:hover{
+    color: #ffffff;
+}
 
+[href="#home"]:hover{
+    background-color: #ffffff;
+}
+
+[href="#home"] svg:hover{
+    stroke: #EB5428;
+}
+
+[href="#profile"]{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+[href="#profile"] svg{
+    stroke: #EB5428;
+}
+
+[href="#profile"] a:hover{
+    background-color: #EB5428;
+}
+
+label span{
+    font-family: 'Bebas Neue', cursive;
+    color: #EB5428;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+}
+label span:hover{
+    background-color: #EB5428;
+    color: #ffffff;
+}
 
 label{
     cursor: pointer;
-    display: inline-block;
-    
-    position: relative;
-    user-select: none;
+    display: inline-flex;
 }
 
-label:hover{
-    background-color: #EB5428;
-    stroke: #ffffff;
+ul span{
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
 }
-
-#searchBar {
-    position: absolute;
-    top: 100px;
-    margin: 0 auto;
-}
-
-input{
+nav input{
     display: none;
 }
 
-input:checked ~ ul{
-    max-height: 500px;
+nav input:checked ~ ul{
+    max-height: 380px;
 }
 
+#searchBar{
+    display: flex;
+    position: absolute;
+    top: 90px;
+    margin-left: 80px;    
+}
+#searchBar input{
+    border: 3px solid #EB5428;
+}
+
+button{
+    background-color: #EB5428;
+    border-style: none;
+}
+
+button svg{
+    stroke: #ffffff;
+}
 
 footer{
     background-color: #ffffff;

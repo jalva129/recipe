@@ -62,7 +62,7 @@ menu svg{
     padding: 10px;
 }
 
-article img{
+#tacos img{
     width: 100%;
 }
 
@@ -157,6 +157,7 @@ nav{
     z-index: 1;
     padding: 0;
 }
+
 nav h2, nav img{
     visibility: hidden;
     height: 1px;

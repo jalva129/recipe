@@ -156,6 +156,7 @@ nav{
     top: 0;
     z-index: 1;
     padding: 0;
+    height: 72px;
 }
 
 nav h2, nav img{
@@ -185,10 +186,13 @@ nav li a {
     padding-top: 5px;
     padding-bottom: 0;
     padding-left: 80px;
-    padding-right: 70px;
+    padding-right: 80px;
     
 }
-nav li:hover{
+nav ul{
+    background-color: #ffffff;
+}
+#meals li:hover{
     background-color: #EB5428;
 }
 
@@ -207,7 +211,7 @@ nav a:hover{
 [href="#profile"]{
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 5px;
     display: flex;
     flex-direction: column;
     padding-top: 5px;
@@ -218,11 +222,9 @@ nav a:hover{
 
 [href="#profile"] svg{
     stroke: #EB5428;
+    padding-left: 10px;
 }
 
-[href="#profile"] a:hover{
-    background-color: #EB5428;
-}
 
 label span{
     font-family: 'Bebas Neue', cursive;
@@ -326,4 +328,134 @@ footer ul a{
 
 footer svg{
     padding: 5px;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        width: 768px;
+    }
+    h1{
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 50px;
+    }
+
+    header{
+        height: 260px;
+        
+    }
+    menu{
+        width: 768px;
+        position: absolute;
+        top: 244px;
+        background-color: rgba(255,255,255, .6);
+    }
+
+
+    nav{
+        width: 768px;
+        height: 180px;
+    }
+
+    nav label{
+        visibility: hidden;
+        padding: 0;
+        height: 0px;
+        width: 0px;
+    }
+
+    nav ul{
+        overflow: visible;
+    }
+    nav a{
+        text-align: center;
+    }
+
+    label span, label svg{
+        width: 0;
+        padding: 0px;
+    }
+    #meals img{
+        visibility: visible;
+        width: 50%;
+        height: auto;
+        padding-right: 40px;
+    }
+    #meals{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 60px;
+    }
+    nav img{
+        visibility: visible;
+    }
+    #ham{
+        height: 0;
+        width: 0;
+    }
+
+    [href="#home"]{
+        padding: 5px;
+        transform: translateX(-100px);
+        transition: transform 1s;
+    }
+
+    [href="#home"] li{
+        height: 0px;
+        width: 0px;
+        padding: 0px;
+        visibility: hidden;
+
+    }
+
+    #ham{
+        padding: 0;
+    }
+    #searchBar{
+        transform: translate(330px,-80px);
+        transition: transform 1s;
+        z-index: 1;
+        position: fixed;
+    }
+
+
+    dl{
+        grid-template-columns: auto auto;
+    }
+    
+    dt{
+        text-align: right;
+    }
+
+    #recipe{
+        display: flex;
+        flex: 1;
+        margin: 10px;
+        
+    }
+
+    #sidedishes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer{
+        height: 350px;
+    }
+
+    footer ul{
+       position: relative;
+       left: 350px;
+    }
+    #copyright{
+        position: relative;
+        bottom: 100px;
+        width: 300px;
+    }
+    footer img{
+        width: 70%;
+    }
+
 }

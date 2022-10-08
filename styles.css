@@ -7,6 +7,7 @@ body{
     width: 414px;
     background-color: #f2f2f2;
     margin: 0 auto;
+    height: auto;
 }
 
 h1, h2, h3{
@@ -60,7 +61,13 @@ menu a{
 
 menu svg{
     padding: 10px;
+    margin: 0 auto;
 }
+
+
+ menu a:hover{
+     text-decoration: underline 5px;
+ }
 
 #tacos img{
     width: 100%;
@@ -351,6 +358,11 @@ footer svg{
         background-color: rgba(255,255,255, .6);
     }
 
+    menu a{
+        display: flex;
+        flex-direction: column;
+    }
+
 
     nav{
         width: 768px;
@@ -414,7 +426,7 @@ footer svg{
     }
     #searchBar{
         transform: translate(330px,-80px);
-        transition: transform 1s;
+        transition: transform 1s ease-in-out;
         z-index: 1;
         position: fixed;
     }
@@ -458,4 +470,125 @@ footer svg{
         width: 70%;
     }
 
+}
+
+@media screen and (min-width: 1280px){
+    body{
+        width: 1280px;
+    }
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        width: 1280px;
+        height: 107px;
+    }
+
+    [href="#home"]{
+        padding: 20px;
+    }
+
+    #meals img{
+        width: 80%;
+    }
+
+    #meals li{
+        width: 80px;
+        height: 100px;
+    }
+    #meals{
+        position: absolute;
+        top: 0;
+        left: 300px;
+        justify-content: center;
+    }
+
+    #searchBar{
+        position: absolute;
+        margin: 0 auto;
+        transform: translate(500px, 50px);
+        transition: transform 1s ease-in-out;
+        z-index: 0;
+
+    }
+
+    menu{
+        flex-direction: column;
+        width: 150px;
+        height: 768px;
+        
+    }
+
+    
+    
+    menu a{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #tacos img{
+        width: 40%;
+    }
+
+   #tacos {
+        display: flex;
+        position: relative;
+        left: 150px;
+   }
+   #tacos p{
+        width: 600px;
+   }
+   #details{
+    background-color: #0D0d0D;
+    color: #7ABFBF;
+   }
+
+   dl{
+    display: flex;
+    max-width: 768px;
+    padding: 10px;
+    position: relative;
+    left: 100px;
+    
+   }
+   dt{
+    margin-right: 50px;
+   }
+
+   dd{
+    margin-right: 30px;
+   }
+
+   #sidedishes{
+        display: flex;
+        justify-content: center;
+   }
+
+   figure{
+    display: flex;
+    flex-direction: column;
+   }
+
+   footer{
+    height: 250px;
+   }
+
+   footer ul{
+    left: 700px;
+   }
+   footer li{
+     margin: 30px;
+   }
+
+   #copyright img{
+    position: relative;
+    bottom: 80px;
+    right: 20px;
+   }
+   #copyright p{
+        position: relative;
+        left: 140px;
+        bottom: 260px;
+   }
 }
